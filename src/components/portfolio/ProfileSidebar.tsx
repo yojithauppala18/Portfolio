@@ -8,11 +8,11 @@ const ProfileSidebar = () => {
   const [animationPhase, setAnimationPhase] = useState<'loading' | 'complete'>('loading');
   const [isHovering, setIsHovering] = useState(false);
 
-  // After 2 seconds (double-flip animation complete), allow hover interactions
+  // After 2.5 seconds (2s delay + 0.5s animation), allow hover interactions
   useEffect(() => {
     const timer = setTimeout(() => {
       setAnimationPhase('complete');
-    }, 2000);
+    }, 2500);
     return () => clearTimeout(timer);
   }, []);
 

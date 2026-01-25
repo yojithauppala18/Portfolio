@@ -144,6 +144,6 @@
   }
 
   .animate-double-flip {
-    animation: double-flip 2s ease-in-out forwards;
+    animation: double-flip 0.5s ease-in-out 2s forwards;
   }
 }
