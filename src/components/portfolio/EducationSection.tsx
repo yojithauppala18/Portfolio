@@ -1,6 +1,6 @@
-import { useEffect } from "react";
 import { GraduationCap, Award } from "lucide-react";
 import salesforceBadge from "@/assets/salesforce-badge.png";
+import googleCloudBadge from "@/assets/google-cloud-badge.png";
 
 const EducationSection = () => {
   const education = [
@@ -24,20 +24,6 @@ const EducationSection = () => {
     },
   ];
 
-
-  useEffect(() => {
-    const script = document.createElement('script');
-    script.src = '//cdn.credly.com/assets/utilities/embed.js';
-    script.async = true;
-    document.body.appendChild(script);
-    
-    return () => {
-      const existingScript = document.querySelector('script[src="//cdn.credly.com/assets/utilities/embed.js"]');
-      if (existingScript) {
-        document.body.removeChild(existingScript);
-      }
-    };
-  }, []);
 
   return (
     <section className="animate-fade-in">
@@ -77,14 +63,16 @@ const EducationSection = () => {
             <h3 className="text-lg font-semibold text-foreground">Certifications</h3>
           </div>
           <div className="grid grid-cols-2 gap-4">
-            {/* Google Cloud - Credly Badge */}
+            {/* Google Cloud - Image Badge */}
             <div className="bg-secondary rounded-xl p-4 gold-border flex flex-col items-center justify-center min-h-[200px]">
-              <div 
-                data-iframe-width="150" 
-                data-iframe-height="170" 
-                data-share-badge-id="6c6b3e36-5bca-437a-82a2-e1940e63134f" 
-                data-share-badge-host="https://www.credly.com"
+              <img 
+                src={googleCloudBadge} 
+                alt="Google Cloud Professional Data Engineer" 
+                className="w-24 h-24 object-contain mb-2"
               />
+              <span className="text-sm text-muted-foreground text-center">
+                Google Cloud Professional Data Engineer
+              </span>
             </div>
             
             {/* Salesforce - Image Badge */}
