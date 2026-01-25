@@ -40,10 +40,11 @@ const AboutSection = () => {
           I’m an <strong>Applied Machine Learning and NLP Engineer</strong> with experience building and deploying
           production-ready ML systems across NLP, computer vision, and large-scale data pipelines.
         </p>
+
         <p className="mt-4">
-          I’m currently pursuing my graduate studies at <strong>The University of Texas at Dallas</strong>, where I also
-          serve as a <strong>Graduate Teaching Assistant for Applied Natural Language Processing</strong>, working
-          closely with Transformer-based models, LLM workflows, and rigorous model evaluation practices.
+          I’m a <strong>graduate of The University of Texas at Dallas</strong>, where I also served as a{" "}
+          <strong>Graduate Teaching Assistant for Applied Natural Language Processing</strong>, working extensively with
+          Transformer-based models, LLM workflows, and rigorous model evaluation practices.
         </p>
 
         <p className="mt-4">
