@@ -31,8 +31,10 @@ const ExperienceSection = () => {
       period: "Jun 2023 - Jan 2024",
       title: "Systems Engineer",
       company: "Tata Consultancy Services (TCS)",
-      details:
-        "Automated ETL workflows, reduced processing time by 98% (24hrs → 25min). Developed Power BI dashboards and ML models.",
+      details: [
+        "Optimized SSMS queries and MuleSoft API integrations across 5+ enterprise systems, reducing ETL data latency by 35%.",
+        "Conducted A/B tests on data retrieval workflows, identifying optimizations that boosted mission-critical analytics performance by 40%.",
+      ],
     },
   ];
 
