@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { GraduationCap, Award } from "lucide-react";
+import salesforceBadge from "@/assets/salesforce-badge.png";
 
 const EducationSection = () => {
   const education = [
@@ -23,11 +24,6 @@ const EducationSection = () => {
     },
   ];
 
-  const certifications = [
-    "Salesforce Certified Associate",
-    "HackerRank SQL (Advanced)",
-    "HackerRank Python (Basic)",
-  ];
 
   useEffect(() => {
     const script = document.createElement('script');
@@ -80,25 +76,41 @@ const EducationSection = () => {
             </div>
             <h3 className="text-lg font-semibold text-foreground">Certifications</h3>
           </div>
-          <div className="flex flex-wrap items-start gap-4">
-            {/* Credly Badge for Google Cloud Professional Data Engineer */}
-            <div 
-              data-iframe-width="150" 
-              data-iframe-height="270" 
-              data-share-badge-id="6c6b3e36-5bca-437a-82a2-e1940e63134f" 
-              data-share-badge-host="https://www.credly.com"
-            />
+          <div className="grid grid-cols-2 gap-4">
+            {/* Google Cloud - Credly Badge */}
+            <div className="bg-secondary rounded-xl p-4 gold-border flex flex-col items-center justify-center min-h-[200px]">
+              <div 
+                data-iframe-width="150" 
+                data-iframe-height="170" 
+                data-share-badge-id="6c6b3e36-5bca-437a-82a2-e1940e63134f" 
+                data-share-badge-host="https://www.credly.com"
+              />
+            </div>
             
-            {/* Other Certifications */}
-            <div className="flex flex-wrap gap-2 flex-1">
-              {certifications.map((cert, index) => (
-                <span
-                  key={index}
-                  className="px-4 py-2 bg-secondary rounded-xl text-sm text-muted-foreground gold-border hover:text-foreground transition-colors h-fit"
-                >
-                  {cert}
-                </span>
-              ))}
+            {/* Salesforce - Image Badge */}
+            <div className="bg-secondary rounded-xl p-4 gold-border flex flex-col items-center justify-center min-h-[200px]">
+              <img 
+                src={salesforceBadge} 
+                alt="Salesforce Certified Associate" 
+                className="w-24 h-24 object-contain mb-2"
+              />
+              <span className="text-sm text-muted-foreground text-center">
+                Salesforce Certified Associate
+              </span>
+            </div>
+            
+            {/* HackerRank SQL */}
+            <div className="bg-secondary rounded-xl p-4 gold-border flex items-center justify-center min-h-[100px]">
+              <span className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                HackerRank SQL (Advanced)
+              </span>
+            </div>
+            
+            {/* HackerRank Python */}
+            <div className="bg-secondary rounded-xl p-4 gold-border flex items-center justify-center min-h-[100px]">
+              <span className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                HackerRank Python (Basic)
+              </span>
             </div>
           </div>
         </div>
