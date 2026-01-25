@@ -87,19 +87,6 @@ const EducationSection = () => {
               </span>
             </div>
             
-            {/* HackerRank SQL */}
-            <div className="bg-secondary rounded-xl p-4 gold-border flex items-center justify-center min-h-[100px]">
-              <span className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-                HackerRank SQL (Advanced)
-              </span>
-            </div>
-            
-            {/* HackerRank Python */}
-            <div className="bg-secondary rounded-xl p-4 gold-border flex items-center justify-center min-h-[100px]">
-              <span className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-                HackerRank Python (Basic)
-              </span>
-            </div>
           </div>
         </div>
       </div>
