@@ -37,7 +37,7 @@ const ExperienceSection = () => {
       ],
     },
     {
-      period: "Apr 2022 - May 2022",
+      period: "Jan 2022 - May 2022",
       title: "Data Science Intern",
       company: "Coincent (Online)",
       details: [
