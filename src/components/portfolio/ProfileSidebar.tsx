@@ -5,21 +5,16 @@ import memojiAvatar from "@/assets/memoji-avatar.png";
 import ResumeModal from "./ResumeModal";
 
 const ProfileSidebar = () => {
-  const [showMemoji, setShowMemoji] = useState(false);
+  const [animationPhase, setAnimationPhase] = useState<'loading' | 'complete'>('loading');
   const [isHovering, setIsHovering] = useState(false);
-  const [initialLoadComplete, setInitialLoadComplete] = useState(false);
 
-  // After 2 seconds, flip to show memoji
+  // After 2 seconds (double-flip animation complete), allow hover interactions
   useEffect(() => {
     const timer = setTimeout(() => {
-      setShowMemoji(true);
-      setInitialLoadComplete(true);
+      setAnimationPhase('complete');
     }, 2000);
     return () => clearTimeout(timer);
   }, []);
-
-  // Show real photo during initial load OR when hovering after load
-  const showRealPhoto = !initialLoadComplete || isHovering;
 
   const contactInfo = [
     { icon: Mail, label: "Email", value: "yojitha.188@gmail.com", href: "mailto:yojitha.188@gmail.com" },
@@ -42,7 +37,11 @@ const ProfileSidebar = () => {
             onMouseEnter={() => setIsHovering(true)}
             onMouseLeave={() => setIsHovering(false)}
           >
-            <div className={`relative w-full h-full transition-transform duration-700 transform-style-3d ${showRealPhoto ? '' : 'rotate-y-180'}`}>
+            <div className={`relative w-full h-full transform-style-3d ${
+              animationPhase === 'loading' 
+                ? 'animate-double-flip' 
+                : isHovering ? '' : 'rotate-y-180'
+            } ${animationPhase === 'complete' ? 'transition-transform duration-700' : ''}`}>
               {/* Front - Real Photo */}
               <div className="absolute w-full h-full backface-hidden rounded-2xl overflow-hidden bg-gradient-to-br from-muted to-secondary">
                 <img src={avatar} alt="Yojitha Uppala" className="w-full h-full object-cover" />
