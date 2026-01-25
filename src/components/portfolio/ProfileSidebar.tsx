@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Mail, Phone, MapPin, Github, Linkedin } from "lucide-react";
 import avatar from "@/assets/avatar.png";
-import memojiAvatar from "@/assets/memoji-avatar.png";
+import ghibliAvatar from "@/assets/ghibli-avatar.png";
 import ResumeModal from "./ResumeModal";
 
 const ProfileSidebar = () => {
@@ -46,9 +46,9 @@ const ProfileSidebar = () => {
               <div className="absolute w-full h-full backface-hidden rounded-2xl overflow-hidden bg-gradient-to-br from-muted to-secondary">
                 <img src={avatar} alt="Yojitha Uppala" className="w-full h-full object-cover" />
               </div>
-              {/* Back - Memoji Avatar */}
+              {/* Back - Ghibli Avatar */}
               <div className="absolute w-full h-full backface-hidden rounded-2xl overflow-hidden rotate-y-180 bg-gradient-to-br from-primary/20 to-secondary">
-                <img src={memojiAvatar} alt="Yojitha Avatar" className="w-full h-full object-cover" />
+                <img src={ghibliAvatar} alt="Yojitha Avatar" className="w-full h-full object-cover" />
               </div>
             </div>
           </div>
