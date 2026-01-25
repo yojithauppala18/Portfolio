@@ -22,7 +22,7 @@ const AboutSection = () => {
     },
     {
       icon: Cloud,
-      title: "Production ML & MLOps",
+      title: "Cloud & MLOps",
       description:
         "Operationalizing ML systems with CI/CD, containerization, cloud deployment, and monitoring to move models from experimentation into reliable production environments.",
     },
