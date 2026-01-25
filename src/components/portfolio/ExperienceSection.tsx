@@ -18,14 +18,14 @@ const ExperienceSection = () => {
       ],
     },
     {
-      period: "Jan 2025 — Jul 2025",
+      period: "Jan 2025 - Jul 2025",
       title: "Data Engineering/ Machine Learning Intern",
       company: "InnovatEV Global",
       details:
         "Built ETL pipelines processing 6M+ EV charging records. Reduced data latency by 40% using GCP BigQuery and Airflow.",
     },
     {
-      period: "Jun 2023 — Jan 2024",
+      period: "Jun 2023 - Jan 2024",
       title: "Systems Engineer",
       company: "Tata Consultancy Services (TCS)",
       details:
