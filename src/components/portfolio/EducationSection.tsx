@@ -3,22 +3,22 @@ import { GraduationCap, Award } from "lucide-react";
 const EducationSection = () => {
   const education = [
     {
-      period: "2024 — 2026",
-      title: "MS in Business Analytics & Artificial Intelligence",
+      period: "Jan 2024 – Dec 2025",
+      title: "Master of Science in Business Analytics & Artificial Intelligence",
       institution: "The University of Texas at Dallas",
-      details: "Focus: Machine Learning, Deep Learning, Statistical Modeling",
+      details: "GPA: 3.77/4.00",
     },
     {
-      period: "2022 — 2024",
-      title: "Diploma in Data Science",
-      institution: "Indian Institute of Technology, Madras",
-      details: "Advanced coursework in ML, Statistics, and Programming",
+      period: "Jan 2022 – May 2023",
+      title: "Diploma in Programming & Data Science",
+      institution: "Indian Institute of Technology Madras",
+      details: "GPA: 6.24/10.00",
     },
     {
-      period: "2017 — 2021",
-      title: "B.E. in Computer Science",
-      institution: "National Institute of Technology, Agartala",
-      details: "CGPA: 8.72 | Focus: Algorithms, Data Structures, Databases",
+      period: "Aug 2019 – May 2023",
+      title: "Bachelor of Engineering in Electronics and Instrumentation",
+      institution: "National Institute of Technology Agartala",
+      details: "GPA: 8.44/10.00",
     },
   ];
 
