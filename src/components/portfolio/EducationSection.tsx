@@ -65,13 +65,13 @@ const EducationSection = () => {
           </div>
           <div className="grid grid-cols-2 gap-4">
             {/* Google Cloud - Image Badge */}
-            <div className="bg-secondary rounded-xl p-4 gold-border flex flex-col items-center justify-center min-h-[200px]">
+            <div className="group bg-secondary rounded-xl p-4 gold-border flex flex-col items-center justify-center min-h-[200px] cursor-pointer transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-primary/20 hover:border-primary/60">
               <img 
                 src={googleCloudBadge} 
                 alt="Google Cloud Professional Data Engineer" 
-                className="w-24 h-24 object-contain mb-2"
+                className="w-24 h-24 object-contain mb-2 transition-transform duration-300 group-hover:scale-110"
               />
-              <span className="text-sm text-muted-foreground text-center mb-3">
+              <span className="text-sm text-muted-foreground text-center mb-3 transition-colors duration-300 group-hover:text-foreground">
                 Google Cloud Professional Data Engineer
               </span>
               <CertificateModal 
@@ -86,13 +86,13 @@ const EducationSection = () => {
             </div>
             
             {/* Salesforce - Image Badge */}
-            <div className="bg-secondary rounded-xl p-4 gold-border flex flex-col items-center justify-center min-h-[200px]">
+            <div className="group bg-secondary rounded-xl p-4 gold-border flex flex-col items-center justify-center min-h-[200px] cursor-pointer transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-primary/20 hover:border-primary/60">
               <img 
                 src={salesforceBadge} 
                 alt="Salesforce Certified Associate" 
-                className="w-24 h-24 object-contain mb-2"
+                className="w-24 h-24 object-contain mb-2 transition-transform duration-300 group-hover:scale-110"
               />
-              <span className="text-sm text-muted-foreground text-center mb-3">
+              <span className="text-sm text-muted-foreground text-center mb-3 transition-colors duration-300 group-hover:text-foreground">
                 Salesforce Certified Associate
               </span>
               <CertificateModal 
