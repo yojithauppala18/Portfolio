@@ -1,8 +1,26 @@
+import { useState, useEffect } from "react";
 import { Mail, Phone, MapPin, Github, Linkedin } from "lucide-react";
 import avatar from "@/assets/avatar.png";
+import memojiAvatar from "@/assets/memoji-avatar.png";
 import ResumeModal from "./ResumeModal";
 
 const ProfileSidebar = () => {
+  const [showMemoji, setShowMemoji] = useState(false);
+  const [isHovering, setIsHovering] = useState(false);
+  const [initialLoadComplete, setInitialLoadComplete] = useState(false);
+
+  // After 2 seconds, flip to show memoji
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowMemoji(true);
+      setInitialLoadComplete(true);
+    }, 2000);
+    return () => clearTimeout(timer);
+  }, []);
+
+  // Show real photo during initial load OR when hovering after load
+  const showRealPhoto = !initialLoadComplete || isHovering;
+
   const contactInfo = [
     { icon: Mail, label: "Email", value: "yojitha.188@gmail.com", href: "mailto:yojitha.188@gmail.com" },
     { icon: Phone, label: "Phone", value: "(469) 688-7337", href: "tel:+14696887337" },
@@ -13,13 +31,27 @@ const ProfileSidebar = () => {
     { icon: Github, href: "https://github.com/yojithauppala18", label: "GitHub" },
     { icon: Linkedin, href: "https://www.linkedin.com/in/yojithauppala/", label: "LinkedIn" },
   ];
+
   return (
     <aside className="w-full lg:w-80 lg:min-w-80 lg:sticky lg:top-8 lg:self-start">
       <div className="bg-card rounded-3xl p-6 gold-border card-shadow">
-        {/* Avatar */}
+        {/* Avatar with 3D Flip Animation */}
         <div className="flex justify-center mb-4">
-          <div className="w-32 h-32 rounded-2xl overflow-hidden bg-gradient-to-br from-muted to-secondary">
-            <img src={avatar} alt="Yojitha Uppala" className="w-full h-full object-cover" />
+          <div 
+            className="w-32 h-32 perspective-1000 cursor-pointer"
+            onMouseEnter={() => setIsHovering(true)}
+            onMouseLeave={() => setIsHovering(false)}
+          >
+            <div className={`relative w-full h-full transition-transform duration-700 transform-style-3d ${showRealPhoto ? '' : 'rotate-y-180'}`}>
+              {/* Front - Real Photo */}
+              <div className="absolute w-full h-full backface-hidden rounded-2xl overflow-hidden bg-gradient-to-br from-muted to-secondary">
+                <img src={avatar} alt="Yojitha Uppala" className="w-full h-full object-cover" />
+              </div>
+              {/* Back - Memoji Avatar */}
+              <div className="absolute w-full h-full backface-hidden rounded-2xl overflow-hidden rotate-y-180 bg-gradient-to-br from-primary/20 to-secondary">
+                <img src={memojiAvatar} alt="Yojitha Avatar" className="w-full h-full object-cover" />
+              </div>
+            </div>
           </div>
         </div>
 
