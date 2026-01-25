@@ -30,7 +30,7 @@ A personal portfolio website showcasing my professional experience, skills, and 
 
 ```sh
 # Clone the repository
-git clone <YOUR_GIT_URL>
+git clone [<YOUR_GIT_URL>](https://github.com/yojithauppala18/your-digital-you)
 
 # Navigate to the project directory
 cd <YOUR_PROJECT_NAME>
@@ -50,6 +50,6 @@ npm run build
 
 ## Contact
 
-- **Email**: yojitha.uppala@gmail.com
+- **Email**: yojitha.188@gmail.com
 - **LinkedIn**: [linkedin.com/in/yojitha](https://linkedin.com/in/yojitha)
 - **GitHub**: [github.com/yojitha](https://github.com/yojitha)
