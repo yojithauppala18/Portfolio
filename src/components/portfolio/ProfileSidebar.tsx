@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Mail, Phone, MapPin, Github, Linkedin } from "lucide-react";
-import avatar from "@/assets/avatar.png";
+import avatar from "@/assets/ghibli-avatar.png";
 import memojiAvatar from "@/assets/memoji-avatar.png";
 import ResumeModal from "./ResumeModal";
 
