@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { GraduationCap, Award } from "lucide-react";
 
 const EducationSection = () => {
@@ -23,11 +24,24 @@ const EducationSection = () => {
   ];
 
   const certifications = [
-    "Google Cloud Professional Data Engineer",
     "Salesforce Certified Associate",
     "HackerRank SQL (Advanced)",
     "HackerRank Python (Basic)",
   ];
+
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.src = '//cdn.credly.com/assets/utilities/embed.js';
+    script.async = true;
+    document.body.appendChild(script);
+    
+    return () => {
+      const existingScript = document.querySelector('script[src="//cdn.credly.com/assets/utilities/embed.js"]');
+      if (existingScript) {
+        document.body.removeChild(existingScript);
+      }
+    };
+  }, []);
 
   return (
     <section className="animate-fade-in">
@@ -66,15 +80,26 @@ const EducationSection = () => {
             </div>
             <h3 className="text-lg font-semibold text-foreground">Certifications</h3>
           </div>
-          <div className="flex flex-wrap gap-2">
-            {certifications.map((cert, index) => (
-              <span
-                key={index}
-                className="px-4 py-2 bg-secondary rounded-xl text-sm text-muted-foreground gold-border hover:text-foreground transition-colors"
-              >
-                {cert}
-              </span>
-            ))}
+          <div className="flex flex-wrap items-start gap-4">
+            {/* Credly Badge for Google Cloud Professional Data Engineer */}
+            <div 
+              data-iframe-width="150" 
+              data-iframe-height="270" 
+              data-share-badge-id="6c6b3e36-5bca-437a-82a2-e1940e63134f" 
+              data-share-badge-host="https://www.credly.com"
+            />
+            
+            {/* Other Certifications */}
+            <div className="flex flex-wrap gap-2 flex-1">
+              {certifications.map((cert, index) => (
+                <span
+                  key={index}
+                  className="px-4 py-2 bg-secondary rounded-xl text-sm text-muted-foreground gold-border hover:text-foreground transition-colors h-fit"
+                >
+                  {cert}
+                </span>
+              ))}
+            </div>
           </div>
         </div>
       </div>
