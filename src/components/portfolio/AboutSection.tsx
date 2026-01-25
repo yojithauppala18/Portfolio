@@ -32,14 +32,14 @@ const AboutSection = () => {
       </h2>
 
       <div className="space-y-4 text-muted-foreground mb-8">
-        <p>
-          I'm a versatile data professional passionate about building intelligent systems that transform raw data into impactful solutions. With expertise spanning <span className="text-foreground font-medium">Data Engineering</span>, <span className="text-foreground font-medium">Data Science</span>, and <span className="text-foreground font-medium">AI/ML Engineering</span>, I bring a holistic approach to solving complex data challenges.
+        <p className="group/para cursor-default transition-all duration-300 hover:text-muted-foreground/50">
+          I'm a versatile data professional passionate about building intelligent systems that transform raw data into impactful solutions. With expertise spanning <span className="text-foreground font-medium transition-colors duration-300 group-hover/para:text-primary">Data Engineering</span>, <span className="text-foreground font-medium transition-colors duration-300 group-hover/para:text-primary">Data Science</span>, and <span className="text-foreground font-medium transition-colors duration-300 group-hover/para:text-primary">AI/ML Engineering</span>, I bring a holistic approach to solving complex data challenges.
         </p>
-        <p>
-          Currently pursuing my <span className="text-primary">MS in Business Analytics & AI</span> at The University of Texas at Dallas, I combine academic rigor with hands-on industry experience. From designing fault-tolerant data pipelines processing millions of records to deploying LLM-powered systems that enhance decision-making, I thrive at the intersection of engineering excellence and machine intelligence.
+        <p className="group/para2 cursor-default transition-all duration-300 hover:text-muted-foreground/50">
+          Currently pursuing my <span className="text-primary transition-all duration-300 group-hover/para2:text-primary group-hover/para2:drop-shadow-[0_0_8px_hsl(var(--primary))]">MS in Business Analytics & AI</span> at The University of Texas at Dallas, I combine academic rigor with hands-on industry experience. From designing fault-tolerant data pipelines processing millions of records to deploying LLM-powered systems that enhance decision-making, I thrive at the intersection of engineering excellence and machine intelligence.
         </p>
-        <p>
-          My work is driven by a simple philosophy: build scalable, reliable systems that deliver measurable business impact while maintaining clean, maintainable code.
+        <p className="group/para3 cursor-default transition-all duration-300 hover:text-muted-foreground/50">
+          My work is driven by a simple philosophy: build <span className="text-foreground font-medium transition-colors duration-300 group-hover/para3:text-primary">scalable, reliable systems</span> that deliver <span className="text-foreground font-medium transition-colors duration-300 group-hover/para3:text-primary">measurable business impact</span> while maintaining clean, maintainable code.
         </p>
       </div>
 
