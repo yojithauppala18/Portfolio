@@ -3,22 +3,25 @@ import { Briefcase } from "lucide-react";
 const ExperienceSection = () => {
   const experience = [
     {
-      period: "Aug 2024 — Present",
+      period: "Aug 2025 — Dec 2025",
       title: "Graduate Teaching Assistant",
       company: "The University of Texas at Dallas",
-      details: "Teaching Data Visualization & Business Intelligence to 200+ students. Mentoring on Tableau, Power BI, and Python analytics.",
+      details:
+        "Teaching Data Visualization & Business Intelligence to 200+ students. Mentoring on Tableau, Power BI, and Python analytics.",
     },
     {
-      period: "May 2024 — Aug 2024",
-      title: "Data Engineering Intern",
+      period: "Jan 2025 — Jul 2025",
+      title: "Data Engineering/ Machine Learning Intern",
       company: "InnovatEV Global",
-      details: "Built ETL pipelines processing 6M+ EV charging records. Reduced data latency by 40% using GCP BigQuery and Airflow.",
+      details:
+        "Built ETL pipelines processing 6M+ EV charging records. Reduced data latency by 40% using GCP BigQuery and Airflow.",
     },
     {
-      period: "Jul 2021 — Jul 2023",
-      title: "Data Engineer",
+      period: "Jun 2023 — Jan 2024",
+      title: "Systems Engineer",
       company: "Tata Consultancy Services (TCS)",
-      details: "Automated ETL workflows, reduced processing time by 98% (24hrs → 25min). Developed Power BI dashboards and ML models.",
+      details:
+        "Automated ETL workflows, reduced processing time by 98% (24hrs → 25min). Developed Power BI dashboards and ML models.",
     },
   ];
 
