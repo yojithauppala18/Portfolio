@@ -21,8 +21,11 @@ const ExperienceSection = () => {
       period: "Jan 2025 - Jul 2025",
       title: "Data Engineering/ Machine Learning Intern",
       company: "InnovatEV Global",
-      details:
-        "Built ETL pipelines processing 6M+ EV charging records. Reduced data latency by 40% using GCP BigQuery and Airflow.",
+      details: [
+        "Developed and deployed production-grade ML pipelines by translating business requirements into scalable AI solutions, improving inference throughput by 30% across computer vision workflows.",
+        "Built performance evaluation, monitoring, and CI/CD pipelines for deployed models, reducing manual validation effort by 40% and enabling reliable integration into downstream business applications.",
+        "Engineered image recognition models using TensorFlow and OpenCV, achieving 98.5% classification accuracy and increasing inference throughput by 30%.",
+      ],
     },
     {
       period: "Jun 2023 - Jan 2024",
