@@ -5,22 +5,26 @@ const AboutSection = () => {
     {
       icon: Database,
       title: "Data Engineering",
-      description: "Building scalable ETL pipelines, cloud infrastructure (GCP/AWS), and big data processing with Spark, Airflow, and Kafka.",
+      description:
+        "Building scalable ETL pipelines, cloud infrastructure (GCP/AWS), and big data processing with Spark, Airflow, and Kafka.",
     },
     {
       icon: BarChart3,
       title: "Data Science",
-      description: "Predictive modeling, statistical analysis, A/B testing, and extracting actionable insights from complex datasets.",
+      description:
+        "Predictive modeling, statistical analysis, A/B testing, and extracting actionable insights from complex datasets.",
     },
     {
       icon: Brain,
       title: "AI & Machine Learning",
-      description: "LLMs, RAG systems, Transformers, NLP, deep learning architectures, and production ML model deployment.",
+      description:
+        "LLMs, RAG systems, Transformers, NLP, deep learning architectures, and production ML model deployment.",
     },
     {
       icon: Cloud,
       title: "Cloud & MLOps",
-      description: "CI/CD pipelines, Docker containerization, Kubernetes, model monitoring, and end-to-end ML lifecycle management.",
+      description:
+        "CI/CD pipelines, Docker containerization, Kubernetes, model monitoring, and end-to-end ML lifecycle management.",
     },
   ];
 
@@ -32,14 +36,20 @@ const AboutSection = () => {
       </h2>
 
       <div className="space-y-4 text-muted-foreground mb-8">
-        <p className="group/para cursor-default transition-all duration-300 hover:text-muted-foreground/50">
-          I'm a versatile data professional passionate about building intelligent systems that transform raw data into impactful solutions. With expertise spanning <span className="text-foreground font-medium transition-colors duration-300 group-hover/para:text-primary">Data Engineering</span>, <span className="text-foreground font-medium transition-colors duration-300 group-hover/para:text-primary">Data Science</span>, and <span className="text-foreground font-medium transition-colors duration-300 group-hover/para:text-primary">AI/ML Engineering</span>, I bring a holistic approach to solving complex data challenges.
+        <p>
+          I’m an <strong>Applied Machine Learning and NLP Engineer</strong> with experience building and deploying
+          production-ready ML systems across NLP, computer vision, and large-scale data pipelines.
         </p>
-        <p className="group/para2 cursor-default transition-all duration-300 hover:text-muted-foreground/50">
-          Currently pursuing my <span className="text-primary transition-all duration-300 group-hover/para2:text-primary group-hover/para2:drop-shadow-[0_0_8px_hsl(var(--primary))]">MS in Business Analytics & AI</span> at The University of Texas at Dallas, I combine academic rigor with hands-on industry experience. From designing fault-tolerant data pipelines processing millions of records to deploying LLM-powered systems that enhance decision-making, I thrive at the intersection of engineering excellence and machine intelligence.
+        <p className="mt-4">
+          I’m currently pursuing my graduate studies at <strong>The University of Texas at Dallas</strong>, where I also
+          serve as a <strong>Graduate Teaching Assistant for Applied Natural Language Processing</strong>, working
+          closely with Transformer-based models, LLM workflows, and rigorous model evaluation practices.
         </p>
-        <p className="group/para3 cursor-default transition-all duration-300 hover:text-muted-foreground/50">
-          My work is driven by a simple philosophy: build <span className="text-foreground font-medium transition-colors duration-300 group-hover/para3:text-primary">scalable, reliable systems</span> that deliver <span className="text-foreground font-medium transition-colors duration-300 group-hover/para3:text-primary">measurable business impact</span> while maintaining clean, maintainable code.
+
+        <p className="mt-4">
+          My work focuses on <strong>LLM-powered applications</strong> such as retrieval-augmented generation (RAG),
+          semantic search, and question answering, with a strong emphasis on scalability, reliability, and real-world
+          impact.
         </p>
       </div>
 
@@ -59,9 +69,7 @@ const AboutSection = () => {
               </div>
               <div>
                 <h4 className="text-foreground font-medium mb-2">{service.title}</h4>
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  {service.description}
-                </p>
+                <p className="text-sm text-muted-foreground leading-relaxed">{service.description}</p>
               </div>
             </div>
           </div>
