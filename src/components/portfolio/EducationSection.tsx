@@ -9,16 +9,16 @@ const EducationSection = () => {
       details: "GPA: 3.77/4.00",
     },
     {
-      period: "Jan 2022 – May 2023",
-      title: "Diploma in Programming & Data Science",
-      institution: "Indian Institute of Technology Madras",
-      details: "GPA: 6.24/10.00",
-    },
-    {
       period: "Aug 2019 – May 2023",
       title: "Bachelor of Engineering in Electronics and Instrumentation",
       institution: "National Institute of Technology Agartala",
       details: "GPA: 8.44/10.00",
+    },
+    {
+      period: "Jan 2022 – May 2023",
+      title: "Diploma in Programming & Data Science",
+      institution: "Indian Institute of Technology Madras",
+      details: "GPA: 6.24/10.00",
     },
   ];
 
