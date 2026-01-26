@@ -31,7 +31,7 @@ const PortfolioSection = () => {
   return (
     <section className="animate-fade-in">
       <h2 className="text-2xl font-semibold text-foreground mb-8 flex items-center gap-3">
-        Portfolio
+        Projects
         <span className="flex-1 h-px bg-gradient-to-r from-primary/50 to-transparent ml-4" />
       </h2>
 
