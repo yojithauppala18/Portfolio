@@ -1,4 +1,5 @@
-import { Github } from "lucide-react";
+import { Github, Play } from "lucide-react";
+import DemoModal from "./DemoModal";
 
 const PortfolioSection = () => {
   const projects = [
@@ -19,6 +20,7 @@ const PortfolioSection = () => {
       techStack: ["Python", "LightGBM", "XGBoost", "AWS", "Pandas"],
       image: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=800&q=80",
       github: "https://github.com/yojithauppala18/flight-fare-prediction",
+      demoUrl: "https://yojithauppala18.github.io/flight-fare-ui/",
     },
     {
       title: "Customer Churn Prediction & Analysis",
@@ -85,6 +87,14 @@ const PortfolioSection = () => {
                 </div>
 
                 <div className="flex gap-3">
+                  {project.demoUrl && (
+                    <DemoModal title={`${project.title} - Live Demo`} demoUrl={project.demoUrl}>
+                      <button className="inline-flex items-center gap-2 px-4 py-2 bg-primary rounded-xl text-sm text-primary-foreground hover:bg-primary/90 transition-all">
+                        <Play className="w-4 h-4" />
+                        Try Me
+                      </button>
+                    </DemoModal>
+                  )}
                   <a
                     href={project.github}
                     target="_blank"
