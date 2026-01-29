@@ -16,7 +16,6 @@ const ContactSection = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    subject: "",
     message: "",
   });
 
@@ -57,7 +56,7 @@ const ContactSection = () => {
       // Reset form after 5 seconds
       setTimeout(() => {
         setMessageSent(false);
-        setFormData({ name: "", email: "", subject: "", message: "" });
+        setFormData({ name: "", email: "", message: "" });
       }, 5000);
     } catch (error) {
       console.error("EmailJS Error:", error);
@@ -162,14 +161,6 @@ const ContactSection = () => {
               className="bg-secondary border-border focus:border-primary h-12 rounded-xl"
             />
           </div>
-          <Input
-            name="subject"
-            placeholder="Subject"
-            value={formData.subject}
-            onChange={handleChange}
-            required
-            className="bg-secondary border-border focus:border-primary h-12 rounded-xl"
-          />
           <Textarea
             name="message"
             placeholder="Your Message"
