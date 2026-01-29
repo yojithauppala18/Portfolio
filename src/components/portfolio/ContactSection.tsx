@@ -142,25 +142,23 @@ const ContactSection = () => {
 
         {/* Contact Form */}
         <form onSubmit={handleSubmit} className="lg:col-span-3 space-y-5">
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-            <Input
-              name="name"
-              placeholder="Full Name"
-              value={formData.name}
-              onChange={handleChange}
-              required
-              className="bg-secondary border-border focus:border-primary h-12 rounded-xl"
-            />
-            <Input
-              name="email"
-              type="email"
-              placeholder="Email Address"
-              value={formData.email}
-              onChange={handleChange}
-              required
-              className="bg-secondary border-border focus:border-primary h-12 rounded-xl"
-            />
-          </div>
+          <Input
+            name="name"
+            placeholder="Full Name"
+            value={formData.name}
+            onChange={handleChange}
+            required
+            className="bg-secondary border-border focus:border-primary h-12 rounded-xl"
+          />
+          <Input
+            name="email"
+            type="email"
+            placeholder="Email Address"
+            value={formData.email}
+            onChange={handleChange}
+            required
+            className="bg-secondary border-border focus:border-primary h-12 rounded-xl"
+          />
           <Textarea
             name="message"
             placeholder="Your Message"
