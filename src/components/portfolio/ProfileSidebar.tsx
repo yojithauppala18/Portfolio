@@ -3,6 +3,7 @@ import { Mail, Phone, MapPin, Github, Linkedin } from "lucide-react";
 import avatar from "@/assets/avatar.png";
 import ghibliAvatar from "@/assets/ghibli-avatar.png";
 import ResumeModal from "./ResumeModal";
+import ViewCounter from "./ViewCounter";
 
 const ProfileSidebar = () => {
   const [animationPhase, setAnimationPhase] = useState<'loading' | 'complete'>('loading');
@@ -90,7 +91,7 @@ const ProfileSidebar = () => {
         </ul>
 
         {/* Social Links */}
-        <div className="flex justify-center gap-3">
+        <div className="flex justify-center items-center gap-3">
           {socialLinks.map((link, index) => (
             <a
               key={index}
@@ -104,6 +105,7 @@ const ProfileSidebar = () => {
             </a>
           ))}
           <ResumeModal />
+          <ViewCounter />
         </div>
       </div>
     </aside>
